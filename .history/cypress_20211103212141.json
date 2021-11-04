@@ -1,0 +1,19 @@
+{
+  "viewportWidth": 1440,
+  "viewportHeight": 1000,
+  "defaultCommandTimeout": 10000,
+  "execTimeout": 60000,
+  "pageLoadTimeout": 15000,
+  "responseTimeout": 15000,
+
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "reportFilename": "report",
+    "overwrite": true,
+    "html": true,
+    "json": true,
+    "charts": true
+  },
+  "video": true
+}

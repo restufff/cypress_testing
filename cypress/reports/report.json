@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-04T08:10:37.348Z",
+    "end": "2021-11-04T08:11:11.633Z",
+    "duration": 34285,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "80b78371-4af1-46f3-86ad-245993971ffb",
+      "title": "",
+      "fullFile": "cypress/integration/myFirstTesting/firstTest.js",
+      "file": "cypress/integration/myFirstTesting/firstTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e08e3167-7422-4eb1-b1c6-db93f0b2aabc",
+          "title": "Add Data Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add Data",
+              "fullTitle": "Add Data Test Add Data",
+              "timedOut": null,
+              "duration": 9982,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on \"Tambah Komunitas\"\nit(\"Click button tambah komoditas for add data\");\ncy.get(\".button_buttonContainer__32gjk\").click(); //Input value in form\nconst firstIkan = \"Ikan Gabus\";\nconst sizeIkan = \"20\";\nconst kota = \"DKI Jakarta\";\nconst provinsi = \"Jakarta Timur\";\nconst harga = \"Rp10.000\";\ncy.get(\".form_gridInput__1LuaA > :nth-child(1) > input\").type(firstIkan);\ncy.get(\".form_gridInput__1LuaA > :nth-child(2) > input\").type(sizeIkan);\ncy.get(\":nth-child(3) > input\").type(kota);\ncy.get(\":nth-child(4) > input\").type(provinsi);\ncy.get(\":nth-child(5) > input\").type(harga); //Click button to save data\ncy.get('.form_actionContainer__Qee0g > [data-type=\"primary\"]').click();\ncy.get(':nth-child(1) > :nth-child(2) > [data-highlight=\"true\"]').should(\"have.text\", firstIkan);\ncy.get(\"tbody > :nth-child(1) > :nth-child(2) > :nth-child(2)\").should(\"contain\", \"JAKARTA TIMUR - DKI JAKARTA\");\ncy.get('tbody > :nth-child(1) > [width=\"100px\"]').should(\"have.text\", sizeIkan);\ncy.get(\"tbody > :nth-child(1) > :nth-child(4)\").should(\"contain\", \"Rp10.000\");\ncy.get(\".Toastify__toast-container\").should(\"be.visible\"); // cy.get(\n//   \".Home_wrapper__gja0e > .Toastify > .Toastify__toast-container > #byv1ukw6xy > .Toastify__toast-body\"\n// ).should(\"contain\", \"Data komoditas berhasil ditambahkan\");\n//Click cancel to close form\ncy.get('.form_actionContainer__Qee0g > [type=\"button\"]').click();",
+              "err": {},
+              "uuid": "49280ea1-4e6c-46f7-baa5-2929a1842c92",
+              "parentUUID": "e08e3167-7422-4eb1-b1c6-db93f0b2aabc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "49280ea1-4e6c-46f7-baa5-2929a1842c92"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9982,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "bce9fd1d-feea-4c1a-bd4c-ee8eb35bce73",
+          "title": "Delete Data Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Delete Data",
+              "fullTitle": "Delete Data Test Delete Data",
+              "timedOut": null,
+              "duration": 270,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click icon trash to delete data\n// cy.wait(4000);\ncy.get(\":nth-child(1) > :nth-child(6) > .table_actionContainer__2htuk > :nth-child(1)\").click(); //Click button \"yakin\" to confirm delete\n// cy.wait(4000);\ncy.get(\".react-confirm-alert-button-group > :nth-child(1)\").click();",
+              "err": {},
+              "uuid": "91f6eca2-4065-4b9a-9204-7f60bdc0cc13",
+              "parentUUID": "bce9fd1d-feea-4c1a-bd4c-ee8eb35bce73",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "91f6eca2-4065-4b9a-9204-7f60bdc0cc13"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 270,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c98d623e-d375-43b2-8ce2-cc23c42cff49",
+          "title": "Cancel Delete Data Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Press Button 'Batal' To Cancel Delete Data",
+              "fullTitle": "Cancel Delete Data Test Press Button 'Batal' To Cancel Delete Data",
+              "timedOut": null,
+              "duration": 8253,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(4000);\ncy.get(\":nth-child(1) > :nth-child(6) > .table_actionContainer__2htuk > :nth-child(1)\").click();\ncy.wait(4000);\ncy.get(\".react-confirm-alert-button-group > :nth-child(2)\").click();",
+              "err": {},
+              "uuid": "92a1f1d5-8a3c-47bd-a8d6-ade8fcfbb45c",
+              "parentUUID": "c98d623e-d375-43b2-8ce2-cc23c42cff49",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92a1f1d5-8a3c-47bd-a8d6-ade8fcfbb45c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8253,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "63a9c26c-5223-4f7c-9549-b7fc36e81cd3",
+          "title": "Edit Data Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Edit Data",
+              "fullTitle": "Edit Data Test Edit Data",
+              "timedOut": null,
+              "duration": 6558,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\":nth-child(1) > :nth-child(6) > .table_actionContainer__2htuk > .edit\").click();\ncy.get(\".form_gridInput__1LuaA > :nth-child(1) > input\").clear().type(\"Lele\");\ncy.get(\".form_gridInput__1LuaA > :nth-child(2) > input\").clear().type(\"50\");\ncy.get(\":nth-child(3) > input\").clear().type(\"Bengkulu\");\ncy.get(\":nth-child(4) > input\").clear().type(\"Kepahiang\");\ncy.get(\":nth-child(5) > input\").clear().type(\"50000\");\ncy.get('.form_actionContainer__Qee0g > [data-type=\"primary\"]').wait(3000).click();\ncy.get('.form_actionContainer__Qee0g > [type=\"button\"]').click();",
+              "err": {},
+              "uuid": "9ee73187-7cd7-4fd9-a1af-2896e4d078f0",
+              "parentUUID": "63a9c26c-5223-4f7c-9549-b7fc36e81cd3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9ee73187-7cd7-4fd9-a1af-2896e4d078f0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6558,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
